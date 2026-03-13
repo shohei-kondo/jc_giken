@@ -6,7 +6,10 @@ extracted_xd/
 *.jpg.jpg
 move_images.ps1
 
+flyer/
+
 # OS
 .DS_Store
 Thumbs.db
 URLのメモ.txt
+部分補修：改行２.jpg
