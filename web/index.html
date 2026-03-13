@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打ち放しコンクリートの補修・原状回復なら有限会社ジェイシー技研</title>
+    <meta name="description" content="東京都杉並区の有限会社ジェイシー技研。25年超の実績で打ち放しコンクリート面の修復・補修、原状回復を専門に行います。シミ、汚れ、クラック、黄ばみを確かな技術で解決。">
+    <meta name="keywords" content="打ち放しコンクリート 補修, 打ち放しコンクリート 原状回復, コンクリート壁 原状回復, ジェイシー技研, 杉並区 塗装工事">
+
+    <!-- Google Fonts: Noto Sans JP -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --main-bg: #1a1a1a;
+            --sub-bg: #f5f5f5;
+            --accent-blue: #003366;
+            --accent-light: #1a4d99;
+            --text-color: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --concrete-grey: #888888;
+            --border-color: #ddd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.85;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* ===== Header & Nav ===== */
+        header {
+            background: rgba(0, 0, 0, 0.92);
+            color: var(--white);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-links { display: flex; }
+        .nav-links li { margin-left: 26px; }
+        .nav-links a { font-weight: 700; font-size: 0.85rem; transition: color 0.3s; }
+        .nav-links a:hover { color: #aac0e0; }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            min-height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+                        url('images/1773379434410.png')
+                        no-repeat center center / cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 100px 24px 60px;
+        }
+
+        .hero-content { max-width: 800px; }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            padding: 4px 20px;
+            margin-bottom: 24px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(1.8rem, 4.5vw, 3.4rem);
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 28px;
+        }
+
+        .hero-sub {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            line-height: 1.9;
+            margin-bottom: 16px;
+            color: #e8e8e8;
+        }
+
+        .hero-note {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        .hero-cta {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.4);
+            display: inline-block;
+            padding: 20px 40px;
+            margin-top: 10px;
+        }
+
+        .hero-cta p {
+            font-size: 0.9rem;
+            color: #ddd;
+            margin-bottom: 6px;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-cta .tel {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: 0.05em;
+        }
+
+        .hero-cta .tel a { color: inherit; }
+
+        /* ===== Section Commons ===== */
+        .section-wrap {
+            padding: 90px 24px;
+        }
+
+        .section-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-wrap.bg-grey { background: var(--sub-bg); }
+        .section-wrap.bg-dark { background: #1e1e1e; color: var(--white); }
+
+        .section-title {
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 18px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--accent-blue);
+        }
+
+        .bg-dark .section-title::after {
+            background: #aac0e0;
+        }
+
+        .section-lead {
+            text-align: center;
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            color: var(--text-light);
+        }
+
+        .bg-dark .section-lead { color: #bbb; }
+
+        /* ===== 強み ===== */
+        .strength-text p {
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+
+        /* ===== お悩み ===== */
+        .troubles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .trouble-item {
+            background: var(--white);
+            border-left: 4px solid var(--accent-blue);
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .troubles-note {
+            margin-top: 30px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        /* ===== 補修とは ===== */
+        .repair-about p {
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+
+        .process-list {
+            padding: 4px 0;
+            margin: 20px 0 20px 1em;
+        }
+
+        .process-list li {
+            padding: 6px 0;
+            padding-left: 1.4em;
+            position: relative;
+        }
+
+        .process-list li::before {
+            content: "・";
+            position: absolute;
+            left: 0;
+        }
+
+        /* ===== 原状回復 ===== */
+        .restoration-text p {
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+
+        /* ===== 撥水仕上げ ===== */
+        .repellent-text p {
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+
+        /* ===== 施工事例 ===== */
+        .cases-list {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .case-item {
+            background: var(--white);
+            border-top: 4px solid var(--accent-blue);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .case-item-header {
+            padding: 20px 28px 0;
+        }
+
+        .case-item .case-no {
+            font-size: 0.78rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 6px;
+        }
+
+        .case-item h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .ba-panel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ba-panel img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ba-label {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.72);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            padding: 4px 14px;
+        }
+
+        .ba-label.after {
+            background: var(--accent-blue);
+        }
+
+        .ba-divider {
+            position: relative;
+        }
+
+        .ba-divider::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--white);
+            z-index: 1;
+        }
+
+        .case-item-desc {
+            padding: 16px 28px 22px;
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        .cases-note {
+            margin-top: 30px;
+            font-size: 0.88rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            .ba-panel img {
+                height: 220px;
+            }
+            .ba-divider::before {
+                display: none;
+            }
+        }
+
+        /* ===== 流れ ===== */
+        .flow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .flow-step:last-child { border-bottom: none; }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            background: var(--accent-blue);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        .step-text {
+            padding-top: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .flow-note {
+            text-align: center;
+            font-size: 0.88rem;
+            color: var(--text-light);
+            margin-top: 24px;
+        }
+
+        /* ===== 対応エリア ===== */
+        .area-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .area-tag {
+            background: var(--accent-blue);
+            color: var(--white);
+            padding: 8px 22px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .area-tag.soft {
+            background: var(--white);
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
+        }
+
+        /* ===== 会社概要 ===== */
+        .company-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .company-table th,
+        .company-table td {
+            padding: 16px 18px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+            font-size: 0.97rem;
+        }
+
+        .company-table th {
+            background: var(--sub-bg);
+            width: 28%;
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .tel-large {
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: var(--accent-blue);
+        }
+
+        /* ===== 求人 ===== */
+        .recruit-box {
+            text-align: center;
+        }
+
+        .recruit-box p {
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: var(--white);
+            padding: 14px 40px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 16px;
+            transition: background 0.3s, transform 0.2s;
+            letter-spacing: 0.05em;
+        }
+
+        .btn:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background: #111;
+            color: #ccc;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        .footer-main {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            color: #ddd;
+            line-height: 2;
+        }
+
+        .footer-copy {
+            font-size: 0.78rem;
+            color: #666;
+            margin-top: 16px;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+
+            .hero { min-height: 100svh; }
+
+            .section-wrap { padding: 70px 16px; }
+
+            .company-table th,
+            .company-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .company-table th {
+                padding-bottom: 4px;
+                border-bottom: none;
+            }
+
+            .flow-steps { gap: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header>
+        <nav>
+            <div class="logo">有限会社ジェイシー技研</div>
+            <ul class="nav-links">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#strength">強み</a></li>
+                <li><a href="#troubles">お悩み</a></li>
+                <li><a href="#cases">施工事例</a></li>
+                <li><a href="#flow">施工の流れ</a></li>
+                <li><a href="#company">会社概要</a></li>
+                <li><a href="#recruit">求人情報</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <div id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">創業25年超の専門業者</div>
+            <h1>
+                打ち放しコンクリートの<br>
+                補修・原状回復なら<br>
+                有限会社ジェイシー技研
+            </h1>
+            <p class="hero-sub">
+                シミ・汚れ・黄ばみ・補修跡・色ムラ。<br>
+                コンクリート面の美観回復を、25年超の経験で丁寧に仕上げます。
+            </p>
+            <p class="hero-note">
+                部分補修から全面修復まで対応可能。<br>
+                マンション・戸建・オフィス・店舗など、用途を問わずご相談ください。
+            </p>
+            <div class="hero-cta">
+                <p>現地確認・ご相談・お見積りは応相談</p>
+                <div class="tel">
+                    <a href="tel:03-5329-4500">TEL：03-5329-4500</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 強み ===== -->
+    <div id="strength" class="section-wrap">
+        <div class="section-inner">
+            <h2 class="section-title">打ち放しコンクリート補修に特化した専門業者です</h2>
+            <div class="strength-text">
+                <p>有限会社ジェイシー技研は、打ち放しコンクリート面の修復・補修工事を専門とする施工会社です。新築時の質感を損なわない仕上がりを重視し、部分的な補修でも周囲との違和感を抑えた施工を行います。</p>
+                <p>コンクリート特有の風合いは一度損なわれると復元が難しく、一般的な塗装では対応できないケースも少なくありません。当社では長年の経験に基づき、素材や劣化状況に応じた最適な補修方法をご提案します。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== お悩み ===== -->
+    <div id="troubles" class="section-wrap bg-grey">
+        <div class="section-inner">
+            <h2 class="section-title">コンクリート壁の原状回復でお困りの方へ</h2>
+            <p class="section-lead">以下のような症状に対応しています。</p>
+            <div class="troubles-grid">
+                <div class="trouble-item">雨だれ・水ジミ・カビによる黒ずみ</div>
+                <div class="trouble-item">黄ばみ・くすみ・経年による変色</div>
+                <div class="trouble-item">部分的な汚れや色ムラ</div>
+                <div class="trouble-item">クラック補修跡の見た目調整</div>
+                <div class="trouble-item">水回り周辺の汚れ・シミ</div>
+                <div class="trouble-item">以前の補修箇所だけが目立つ</div>
+                <div class="trouble-item">退去時の原状回復が必要</div>
+                <div class="trouble-item">内装解体後のコンクリート面の修復</div>
+            </div>
+            <p class="troubles-note">部分補修にも対応しており、全面改修が不要なケースでも施工可能です。</p>
+        </div>
+    </div>
+
+    <!-- ===== 補修とは ===== -->
+    <div id="about" class="section-wrap">
+        <div class="section-inner">
+            <h2 class="section-title">打ち放しコンクリートの美観回復について</h2>
+            <div class="repair-about">
+                <p>打ち放しコンクリートは、素材そのものを見せる仕上げのため、表面の劣化や汚れが直接外観に影響します。環境条件や経年変化により、シミ・白華・色ムラ・ひび割れ補修跡などが発生することがあります。</p>
+                <p>これらを改善するためには、単純な塗装ではなく、以下の工程を適切に行う必要があります。</p>
+            </div>
+            <ul class="process-list">
+                <li>表面の状態調整</li>
+                <li>色合わせ</li>
+                <li>質感の再現</li>
+                <li>耐久性の確保</li>
+            </ul>
+            <div class="repair-about">
+                <p>当社では、既存の風合いを可能な限り維持しながら、新築時に近い状態へと回復させる施工を目指します。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 原状回復 ===== -->
+    <div id="restoration" class="section-wrap bg-grey">
+        <div class="section-inner">
+            <h2 class="section-title">退去時・引き渡し時の原状回復にも対応</h2>
+            <div class="restoration-text">
+                <p>賃貸物件や店舗、オフィスなどでは、契約終了時に原状回復が求められる場合があります。造作撤去後に露出したコンクリート面の補修や、汚損箇所の修復などもお任せください。</p>
+                <p>オーナー様、管理会社様、施工会社様からのご依頼にも対応しています。部分的な施工から全体の美観回復まで、状況に応じて最適な方法をご提案いたします。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 撥水仕上げ ===== -->
+    <div id="repellent" class="section-wrap bg-dark">
+        <div class="section-inner">
+            <h2 class="section-title">メンテナンス性を高める撥水仕上げ</h2>
+            <div class="repellent-text">
+                <p>補修後に撥水処理を施すことで、水や汚れの付着を抑え、清掃しやすくなります。中性洗剤での水拭きが可能となり、美観を長期間維持しやすくなります。</p>
+                <p>用途や環境に応じて施工の可否をご提案いたします。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 施工事例 ===== -->
+    <div id="cases" class="section-wrap">
+        <div class="section-inner">
+            <h2 class="section-title">施工事例</h2>
+            <div class="cases-list">
+
+                <div class="case-item">
+                    <div class="case-item-header">
+                        <div class="case-no">CASE 01</div>
+                        <h3>壁面の大きなシミ・汚れの修復</h3>
+                    </div>
+                    <div class="before-after">
+                        <div class="ba-panel">
+                            <img src="images/PXL_20221210_042114568.jpg" alt="施工前 CASE01">
+                            <span class="ba-label">BEFORE</span>
+                        </div>
+                        <div class="ba-panel ba-divider">
+                            <img src="images/PXL_20221210_051923732.jpg" alt="施工後 CASE01">
+                            <span class="ba-label after">AFTER</span>
+                        </div>
+                    </div>
+                    <p class="case-item-desc">部分補修により周囲との色調を調整し、美観を回復</p>
+                </div>
+
+                <div class="case-item">
+                    <div class="case-item-header">
+                        <div class="case-no">CASE 02</div>
+                        <h3>壁面全体のくすみ・変色の修復</h3>
+                    </div>
+                    <div class="before-after">
+                        <div class="ba-panel">
+                            <img src="images/1658548152940.jpg" alt="施工前 CASE02">
+                            <span class="ba-label">BEFORE</span>
+                        </div>
+                        <div class="ba-panel ba-divider">
+                            <img src="images/1658558519560.jpg" alt="施工後 CASE02">
+                            <span class="ba-label after">AFTER</span>
+                        </div>
+                    </div>
+                    <p class="case-item-desc">表面処理と仕上げにより均一な外観へ改善</p>
+                </div>
+
+                <div class="case-item">
+                    <div class="case-item-header">
+                        <div class="case-no">CASE 03</div>
+                        <h3>水回り付近の補修跡・汚れの修復</h3>
+                    </div>
+                    <div class="before-after">
+                        <div class="ba-panel">
+                            <img src="images/1684109075915.jpg" alt="施工前 CASE03">
+                            <span class="ba-label">BEFORE</span>
+                        </div>
+                        <div class="ba-panel ba-divider">
+                            <img src="images/1684109075988.jpg" alt="施工後 CASE03">
+                            <span class="ba-label after">AFTER</span>
+                        </div>
+                    </div>
+                    <p class="case-item-desc">補修箇所の違和感を抑え、自然な仕上がりを実現</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 施工の流れ ===== -->
+    <div id="flow" class="section-wrap bg-grey">
+        <div class="section-inner">
+            <h2 class="section-title">施工までの基本的な流れ</h2>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="step-num">1</div>
+                    <div class="step-text">お問い合わせ・ご相談</div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">2</div>
+                    <div class="step-text">現地確認（必要に応じて）</div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">3</div>
+                    <div class="step-text">施工内容とお見積りのご提示</div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">4</div>
+                    <div class="step-text">ご契約</div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">5</div>
+                    <div class="step-text">施工</div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">6</div>
+                    <div class="step-text">完了確認・お引き渡し</div>
+                </div>
+            </div>
+            <p class="flow-note">※対応時期・費用は現場状況により異なります。</p>
+        </div>
+    </div>
+
+    <!-- ===== 対応エリア ===== -->
+    <div id="area" class="section-wrap">
+        <div class="section-inner">
+            <h2 class="section-title">対応エリア</h2>
+            <p class="section-lead">東京23区を中心に、以下の地域に対応しています。</p>
+            <div class="area-list">
+                <span class="area-tag">東京23区</span>
+                <span class="area-tag">武蔵野市</span>
+                <span class="area-tag">三鷹市</span>
+                <span class="area-tag">調布市</span>
+                <span class="area-tag">狛江市</span>
+                <span class="area-tag soft">その他近隣地域（応相談）</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 会社概要 ===== -->
+    <div id="company" class="section-wrap bg-grey">
+        <div class="section-inner">
+            <h2 class="section-title">会社概要</h2>
+            <table class="company-table">
+                <tr>
+                    <th>会社名</th>
+                    <td>有限会社ジェイシー技研</td>
+                </tr>
+                <tr>
+                    <th>代表者</th>
+                    <td>中村 正広</td>
+                </tr>
+                <tr>
+                    <th>所在地</th>
+                    <td>〒168-0063 東京都杉並区和泉4-9-5</td>
+                </tr>
+                <tr>
+                    <th>拠点</th>
+                    <td>
+                        〒168-0063 東京都杉並区和泉4-44-42<br>
+                        〒168-0062 東京都杉並区方南1-29-1
+                    </td>
+                </tr>
+                <tr>
+                    <th>電話番号</th>
+                    <td>
+                        <span class="tel-large">
+                            <a href="tel:03-5329-4500">03-5329-4500</a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>資本金</th>
+                    <td>6,000千円</td>
+                </tr>
+                <tr>
+                    <th>建設業許可</th>
+                    <td>東京都知事許可 第117638号</td>
+                </tr>
+                <tr>
+                    <th>業務内容</th>
+                    <td>塗装工事（コンクリート補修等）</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- ===== 求人情報 ===== -->
+    <div id="recruit" class="section-wrap">
+        <div class="section-inner">
+            <h2 class="section-title">求人情報</h2>
+            <div class="recruit-box">
+                <p>当社では施工スタッフを募集しています。</p>
+                <p>経験者は優遇しますが、未経験者もご相談ください。</p>
+                <p>詳細はお問い合わせください。</p>
+                <a href="tel:03-5329-4500" class="btn">採用について問い合わせる</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p class="footer-main">
+            打ち放しコンクリートの補修・原状回復に関するご相談は、<br>
+            有限会社ジェイシー技研までお気軽にお問い合わせください。<br>
+            <strong style="color:#fff; font-size:1.2rem;">
+                <a href="tel:03-5329-4500" style="color:#fff;">TEL：03-5329-4500</a>
+            </strong>
+        </p>
+        <p class="footer-copy">&copy; 2025 有限会社ジェイシー技研 All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

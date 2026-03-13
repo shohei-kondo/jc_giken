@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要・求人情報｜有限会社ジェイシー技研</title>
+    <meta name="description" content="有限会社ジェイシー技研の会社概要・求人情報です。東京都杉並区を拠点とした打ち放しコンクリート補修・原状回復の専門業者。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent-blue: #003366;
+            --accent-light: #1a4d99;
+            --sub-bg: #f5f5f5;
+            --text-color: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --border-color: #ddd;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans JP', sans-serif; line-height: 1.85; color: var(--text-color); background: var(--white); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* ===== Header ===== */
+        header {
+            background: rgba(0,0,0,0.92);
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-blue);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+        }
+        .logo { font-weight: 900; font-size: 1.1rem; letter-spacing: 1px; color: #fff; }
+        .nav-links { display: flex; }
+        .nav-links li { margin-left: 24px; }
+        .nav-links a { font-weight: 700; font-size: 0.85rem; color: #fff; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #aac0e0; }
+
+        /* ===== Page Hero ===== */
+        .page-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2070')
+                        no-repeat center center / cover;
+            padding: 140px 24px 80px;
+            text-align: center;
+            color: #fff;
+        }
+        .page-hero h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        .page-hero p { font-size: 1rem; color: #ccc; }
+
+        /* ===== Breadcrumb ===== */
+        .breadcrumb {
+            background: var(--sub-bg);
+            padding: 12px 24px;
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+        .breadcrumb a { color: var(--accent-blue); }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb span { margin: 0 8px; }
+
+        /* ===== Sections ===== */
+        .section-wrap { padding: 90px 24px; }
+        .section-inner { max-width: 900px; margin: 0 auto; }
+        .section-wrap.bg-grey { background: var(--sub-bg); }
+        .section-title {
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 18px;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 50px; height: 3px;
+            background: var(--accent-blue);
+        }
+
+        /* ===== 会社概要テーブル ===== */
+        .company-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .company-table th,
+        .company-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+            font-size: 0.97rem;
+            vertical-align: top;
+        }
+        .company-table th {
+            background: var(--sub-bg);
+            width: 28%;
+            font-weight: 700;
+            color: var(--accent-blue);
+            white-space: nowrap;
+        }
+        .company-table tr:last-child th,
+        .company-table tr:last-child td { border-bottom: none; }
+        .tel-large {
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--accent-blue);
+        }
+        .tel-large a { color: inherit; }
+
+        /* ===== 地図プレースホルダー ===== */
+        .map-placeholder {
+            background: #eee;
+            border: 1px solid var(--border-color);
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 40px;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== 求人 ===== */
+        .recruit-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+        .recruit-card p {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+        .recruit-card p:last-of-type { color: var(--text-light); font-size: 0.92rem; }
+        .btn {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: #fff;
+            padding: 14px 44px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+            letter-spacing: 0.05em;
+        }
+        .btn:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+        /* ===== CTA ===== */
+        .cta-wrap {
+            background: var(--accent-blue);
+            color: #fff;
+            text-align: center;
+            padding: 70px 24px;
+        }
+        .cta-wrap h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; margin-bottom: 16px; }
+        .cta-wrap p { font-size: 1rem; color: #cce0ff; margin-bottom: 28px; }
+        .cta-tel {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 0.04em;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .cta-tel a { color: inherit; }
+        .cta-note { font-size: 0.88rem; color: #cce0ff; }
+
+        /* ===== Footer ===== */
+        footer { background: #111; color: #ccc; padding: 48px 24px; text-align: center; }
+        .footer-main { font-size: 0.95rem; margin-bottom: 16px; color: #ddd; line-height: 2.2; }
+        .footer-copy { font-size: 0.78rem; color: #666; margin-top: 12px; }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .section-wrap { padding: 70px 16px; }
+            .company-table th,
+            .company-table td { display: block; width: 100%; }
+            .company-table th { padding-bottom: 4px; border-bottom: none; background: transparent; }
+            .recruit-card { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">有限会社ジェイシー技研</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="cases.html">施工事例・施工の流れ</a></li>
+                <li><a href="company.html" class="active">会社概要</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <h1>会社概要</h1>
+        <p>有限会社ジェイシー技研について</p>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">ホーム</a>
+        <span>›</span>
+        会社概要
+    </div>
+
+    <!-- 会社概要 -->
+    <div id="company" class="section-wrap">
+        <div class="section-inner">
+            <h2 class="section-title">会社概要</h2>
+            <table class="company-table">
+                <tr>
+                    <th>会社名</th>
+                    <td>有限会社ジェイシー技研</td>
+                </tr>
+                <tr>
+                    <th>代表者</th>
+                    <td>中村 正広</td>
+                </tr>
+                <tr>
+                    <th>所在地</th>
+                    <td>〒168-0063 東京都杉並区和泉4-9-5</td>
+                </tr>
+                <tr>
+                    <th>拠点</th>
+                    <td>
+                        〒168-0063 東京都杉並区和泉4-44-42<br>
+                        〒168-0062 東京都杉並区方南1-29-1
+                    </td>
+                </tr>
+                <tr>
+                    <th>電話番号</th>
+                    <td>
+                        <span class="tel-large"><a href="tel:03-5329-4500">03-5329-4500</a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>資本金</th>
+                    <td>6,000千円</td>
+                </tr>
+                <tr>
+                    <th>建設業許可</th>
+                    <td>東京都知事許可 第117638号</td>
+                </tr>
+                <tr>
+                    <th>業務内容</th>
+                    <td>塗装工事（コンクリート補修等）</td>
+                </tr>
+            </table>
+
+            <div class="map-placeholder">
+                地図を表示する場合はこちらにGoogle Mapsなどを埋め込みます
+            </div>
+        </div>
+    </div>
+
+    <!-- 求人情報 -->
+    <div id="recruit" class="section-wrap bg-grey">
+        <div class="section-inner">
+            <h2 class="section-title">求人情報</h2>
+            <div class="recruit-card">
+                <p>当社では施工スタッフを募集しています。</p>
+                <p>経験者は優遇しますが、未経験者もご相談ください。</p>
+                <p>詳細はお問い合わせください。</p>
+                <a href="tel:03-5329-4500" class="btn">採用について問い合わせる</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-wrap">
+        <h2>まずはお気軽にご相談ください</h2>
+        <p>現地確認・ご相談・お見積りは応相談</p>
+        <span class="cta-tel"><a href="tel:03-5329-4500">TEL：03-5329-4500</a></span>
+        <p class="cta-note">有限会社ジェイシー技研（東京都杉並区）</p>
+    </div>
+
+    <footer>
+        <p class="footer-main">
+            打ち放しコンクリートの補修・原状回復に関するご相談は、<br>
+            有限会社ジェイシー技研までお気軽にお問い合わせください。<br>
+            <strong style="color:#fff; font-size:1.2rem;">
+                <a href="tel:03-5329-4500" style="color:#fff;">TEL：03-5329-4500</a>
+            </strong>
+        </p>
+        <p class="footer-copy">&copy; 2025 有限会社ジェイシー技研 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
