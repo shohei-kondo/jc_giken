@@ -213,6 +213,71 @@
             flex-shrink: 0;
         }
 
+        /* ===== サンプル実例 ===== */
+        .sample-card {
+            background: var(--white);
+            border-top: 4px solid var(--accent-blue);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+        .sample-ba {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .sample-panel {
+            position: relative;
+            overflow: hidden;
+        }
+        .sample-panel img {
+            width: 100%;
+            height: 360px;
+            display: block;
+            object-fit: cover;
+        }
+        .sample-label {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.72);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            padding: 4px 14px;
+        }
+        .sample-label.after { background: var(--accent-blue); }
+        .sample-panel-cap {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            padding: 10px 16px 14px;
+        }
+        .sample-side {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 36px;
+            align-items: center;
+            padding: 28px;
+        }
+        .sample-side-img {
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+        .sample-side-img img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .sample-caption {
+            font-size: 0.95rem;
+            line-height: 2.1;
+            color: var(--text-color);
+        }
+        .sample-caption p { margin-bottom: 12px; }
+        .sample-caption p:last-child { margin-bottom: 0; }
+        .sample-caption strong { color: var(--accent-blue); }
+
         /* ===== クロスとの比較グリッド ===== */
         .vs-grid {
             display: grid;
@@ -429,6 +494,7 @@
             .vs-grid { grid-template-columns: 1fr; }
             .vs-col.vs-good { border-left: none; border-top: 1px solid var(--border-color); }
             .merit-grid { grid-template-columns: 1fr; }
+            .sample-side { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -439,7 +505,7 @@
             <div class="logo"><a href="index.html">有限会社ジェイシー技研</a></div>
             <ul class="nav-links">
                 <li><a href="index.html">ホーム</a></li>
-                <li><a href="cases.html">施工事例・施工の流れ</a></li>
+                <li><a href="cases.html">原状回復工事の施工事例</a></li>
                 <li><a href="hybring-coat.html" class="active">ハイブリングコートとは</a></li>
                 <li><a href="company.html">会社概要</a></li>
             </ul>
@@ -454,7 +520,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="ナビゲーションメニュー">
         <a href="index.html">ホーム</a>
-        <a href="cases.html">施工事例・施工の流れ</a>
+        <a href="cases.html">原状回復工事の施工事例</a>
         <a href="hybring-coat.html" class="active">ハイブリングコートとは</a>
         <a href="company.html">会社概要</a>
         <div class="mobile-menu-tel">
@@ -514,6 +580,47 @@
         </div>
     </div>
 
+    <!-- サンプル実例 -->
+    <div id="sample" class="section-wrap bg-grey">
+        <div class="section-inner">
+            <h2 class="section-title">ベニヤ板が、コンクリートになる</h2>
+            <p style="text-align:center; color:var(--text-light); font-size:1rem; margin-bottom:48px; margin-top:-30px;">実物サンプルで確かめる、施工前後の変化</p>
+
+            <div class="sample-card">
+                <div class="sample-ba">
+                    <div class="sample-panel">
+                        <img src="../image/Before_IMG_20260317_150811548.jpg" alt="施工前：素のベニヤ板">
+                        <span class="sample-label">BEFORE</span>
+                        <p class="sample-panel-cap">素のベニヤ板</p>
+                    </div>
+                    <div class="sample-panel" style="border-left: 3px solid var(--white);">
+                        <img src="../image/After_IMG_20260317_150754444~2.jpg" alt="施工後：ハイブリングコート仕上げ">
+                        <span class="sample-label after">AFTER</span>
+                        <p class="sample-panel-cap">ハイブリングコート施工後</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sample-card">
+                <div class="sample-side">
+                    <div class="sample-side-img">
+                        <img src="../image/Side_IMG_20260317_150846748.jpg" alt="断面：塗膜の薄さ">
+                    </div>
+                    <div class="sample-caption">
+                        <p><strong>断面を見ると、施工の薄さがよくわかります。</strong></p>
+                        <p>
+                            ベニヤ板の上に、ごく薄い塗膜が乗っているだけ。<br>
+                            それでも表から見れば、コンクリートそのものの質感です。<br>
+                            「叩いてみるまでわからなかった」という言葉が、<br>
+                            この一枚に凝縮されています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <!-- ② 特徴 -->
     <div id="features" class="section-wrap bg-grey">
         <div class="section-inner">
@@ -528,34 +635,19 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-title">✔ 本物のような立体感</div>
-                    <p>
-                        表面に凹凸やムラが生まれ、<br>
-                        光の当たり方によって表情が変わります。
-                    </p>
+                    <p>表面に凹凸やムラが生まれ、光の当たり方によって表情が変わります。</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-title">✔ パネルの継ぎ目を活かした仕上げ</div>
-                    <p>
-                        コンクリートのパネルのように、<br>
-                        板の継ぎ目をデザインとして活かしながら<br>
-                        壁全体をひとつの素材感に仕上げます。
-                    </p>
+                    <div class="feature-title">✔ 継ぎ目をデザインとして活かす</div>
+                    <p>コンクリートパネルのように板の継ぎ目を自然に活かし、壁全体をひとつの素材感に仕上げます。</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-title">✔ 高い耐久性</div>
-                    <p>
-                        剥がれや破れの心配が少なく、<br>
-                        長期間美観を保つことが可能です。
-                    </p>
+                    <div class="feature-title">✔ クロスより高い耐久性</div>
+                    <p>剥がれや破れの心配が少なく、長期間にわたって美観を保つことが可能です。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-title">✔ 用途に応じた保護性能</div>
-                    <p>仕上げのコーティングにより、以下の性能を付加できます。</p>
-                    <ul class="feature-sub-list">
-                        <li>汚れ防止</li>
-                        <li>傷防止</li>
-                        <li>耐水性</li>
-                    </ul>
+                    <p>コーティングの仕様により、汚れ防止・傷防止・耐水性などの保護性能を付加できます。</p>
                 </div>
             </div>
             <div style="overflow:hidden; margin-top:44px;">
