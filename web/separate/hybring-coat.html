@@ -6,587 +6,7 @@
     <title>ハイブリングコートとは｜有限会社ジェイシー技研</title>
     <meta name="description" content="ハイブリングコートは、石膏ボードやベニヤ板などの下地に打ちっぱなしコンクリートのような質感を再現できる仕上げ工法です。有限会社ジェイシー技研が詳しくご説明します。">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --accent-blue: #003366;
-            --accent-light: #1a4d99;
-            --sub-bg: #f5f5f5;
-            --text-color: #333;
-            --text-light: #666;
-            --white: #ffffff;
-            --border-color: #ddd;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Noto Sans JP', sans-serif; line-height: 1.85; color: var(--text-color); background: var(--white); }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-
-        /* ===== Header ===== */
-        header {
-            background: rgba(0,0,0,0.92);
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 2px solid var(--accent-blue);
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 14px 24px;
-        }
-        .logo { font-weight: 900; font-size: 1.1rem; letter-spacing: 1px; color: #fff; }
-        .nav-links { display: flex; }
-        .nav-links li { margin-left: 24px; }
-        .nav-links a { font-weight: 700; font-size: 0.85rem; color: #fff; transition: color 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: #aac0e0; }
-
-        /* ===== Page Hero ===== */
-        .page-hero {
-            background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
-                        url('../image/1773379434410.png')
-                        no-repeat center center / cover;
-            padding: 140px 24px 80px;
-            text-align: center;
-            color: #fff;
-        }
-        .page-hero h1 {
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            font-weight: 900;
-            margin-bottom: 16px;
-        }
-        .page-hero p { font-size: 1rem; color: #ccc; }
-
-        /* ===== Breadcrumb ===== */
-        .breadcrumb {
-            background: var(--sub-bg);
-            padding: 12px 24px;
-            font-size: 0.82rem;
-            color: var(--text-light);
-        }
-        .breadcrumb a { color: var(--accent-blue); }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .breadcrumb span { margin: 0 8px; }
-
-        /* ===== Sections ===== */
-        .section-wrap { padding: 90px 24px; }
-        .section-inner { max-width: 1000px; margin: 0 auto; }
-        .section-wrap.bg-grey { background: var(--sub-bg); }
-        .section-wrap.bg-dark { background: #1e1e1e; color: #fff; }
-        .section-title {
-            font-size: clamp(1.5rem, 3vw, 2.1rem);
-            font-weight: 900;
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-            padding-bottom: 18px;
-        }
-        .section-title::after {
-            content: "";
-            position: absolute;
-            bottom: 0; left: 50%;
-            transform: translateX(-50%);
-            width: 50px; height: 3px;
-            background: var(--accent-blue);
-        }
-        .bg-dark .section-title::after { background: #aac0e0; }
-
-        /* ===== 2カラムレイアウト ===== */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 52px;
-            align-items: start;
-        }
-        .two-col.reverse { direction: rtl; }
-        .two-col.reverse > * { direction: ltr; }
-
-        /* ===== テキスト ===== */
-        .text-body p { font-size: 1.02rem; margin-bottom: 18px; line-height: 2; }
-        .text-body p:last-child { margin-bottom: 0; }
-
-        /* ===== 下地リスト ===== */
-        .base-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .base-tag {
-            background: var(--accent-blue);
-            color: #fff;
-            font-size: 0.88rem;
-            font-weight: 700;
-            padding: 6px 18px;
-        }
-
-        /* ===== 画像プレースホルダー ===== */
-        .img-placeholder {
-            background: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 0.88rem;
-            min-height: 320px;
-            gap: 10px;
-        }
-        .img-placeholder svg { opacity: 0.4; }
-        .img-placeholder span { letter-spacing: 0.05em; }
-        .img-placeholder-full {
-            background: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 0.88rem;
-            min-height: 260px;
-            margin-top: 44px;
-            gap: 10px;
-        }
-        .img-placeholder-full span { letter-spacing: 0.05em; }
-
-        /* ===== 特徴カード ===== */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-bottom: 44px;
-        }
-        .feature-card {
-            background: var(--white);
-            border-left: 4px solid var(--accent-blue);
-            padding: 22px 24px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-        }
-        .feature-card .feature-title {
-            font-weight: 900;
-            font-size: 1.02rem;
-            margin-bottom: 10px;
-            color: var(--accent-blue);
-        }
-        .feature-card p {
-            font-size: 0.93rem;
-            line-height: 1.8;
-            color: var(--text-color);
-        }
-        .feature-sub-list {
-            margin: 10px 0 0 0;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .feature-sub-list li {
-            font-size: 0.9rem;
-            padding-left: 1.2em;
-            position: relative;
-            color: var(--text-color);
-        }
-        .feature-sub-list li::before { content: "・"; position: absolute; left: 0; }
-
-        /* ===== 比較テーブル ===== */
-        .compare-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 24px;
-        }
-        .compare-row {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 14px 18px;
-            background: var(--white);
-            border-left: 4px solid var(--accent-blue);
-            font-size: 0.95rem;
-        }
-        .compare-row .check {
-            color: var(--accent-blue);
-            font-weight: 900;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
-
-        /* ===== サンプル実例 ===== */
-        .sample-card {
-            background: var(--white);
-            border-top: 4px solid var(--accent-blue);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            overflow: hidden;
-            margin-bottom: 32px;
-        }
-        .sample-ba {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-        .sample-panel {
-            position: relative;
-            overflow: hidden;
-        }
-        .sample-panel img {
-            width: 100%;
-            height: 360px;
-            display: block;
-            object-fit: cover;
-        }
-        .sample-label {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: rgba(0,0,0,0.72);
-            color: #fff;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            padding: 4px 14px;
-        }
-        .sample-label.after { background: var(--accent-blue); }
-        .sample-panel-cap {
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            padding: 10px 16px 14px;
-        }
-        .sample-side {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 36px;
-            align-items: center;
-            padding: 28px;
-        }
-        .sample-side-img {
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-        .sample-side-img img {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-        }
-        .sample-caption {
-            font-size: 0.95rem;
-            line-height: 2.1;
-            color: var(--text-color);
-        }
-        .sample-caption p { margin-bottom: 12px; }
-        .sample-caption p:last-child { margin-bottom: 0; }
-        .sample-caption strong { color: var(--accent-blue); }
-
-        /* ===== クロスとの比較グリッド ===== */
-        .vs-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-        }
-        .vs-col { padding: 28px 28px 32px; }
-        .vs-col.vs-bad { background: #f5f5f5; }
-        .vs-col.vs-good { background: #e8eef7; border-left: 1px solid var(--border-color); }
-        .vs-label {
-            font-weight: 900;
-            font-size: 0.9rem;
-            letter-spacing: 0.08em;
-            padding: 6px 14px;
-            display: inline-block;
-            margin-bottom: 18px;
-        }
-        .vs-bad .vs-label { background: #888; color: #fff; }
-        .vs-good .vs-label { background: var(--accent-blue); color: #fff; }
-        .vs-list { display: flex; flex-direction: column; gap: 10px; }
-        .vs-list li {
-            font-size: 0.93rem;
-            padding-left: 1.4em;
-            position: relative;
-            line-height: 1.7;
-        }
-        .vs-bad .vs-list li::before { content: "✕"; position: absolute; left: 0; color: #999; font-size: 0.85rem; }
-        .vs-good .vs-list li::before { content: "✔"; position: absolute; left: 0; color: var(--accent-blue); font-size: 0.85rem; font-weight: 900; }
-        .vs-note {
-            text-align: center;
-            margin-top: 32px;
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--accent-blue);
-            padding: 20px 24px;
-            border: 2px solid var(--accent-blue);
-            background: #f0f4fa;
-            line-height: 1.9;
-        }
-
-        /* ===== メリットカード ===== */
-        .merit-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-bottom: 44px;
-        }
-        .merit-card {
-            background: var(--white);
-            padding: 28px 26px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-        }
-        .merit-card-head {
-            font-weight: 900;
-            font-size: 1rem;
-            color: var(--white);
-            background: var(--accent-blue);
-            padding: 8px 16px;
-            margin: -28px -26px 20px;
-        }
-        .merit-card p { font-size: 0.95rem; line-height: 1.9; color: var(--text-color); }
-
-        /* ===== 施工の流れ ===== */
-        .flow-steps {
-            display: flex;
-            flex-direction: column;
-            max-width: 640px;
-            margin: 0 auto;
-        }
-        .flow-step {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 22px 0;
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-        }
-        .flow-step:last-child { border-bottom: none; }
-        .step-num {
-            flex-shrink: 0;
-            width: 46px;
-            height: 46px;
-            background: var(--accent-blue);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            font-size: 1.1rem;
-        }
-        .step-body { padding-top: 10px; }
-        .step-body strong { font-size: 1.02rem; display: block; margin-bottom: 4px; }
-        .flow-note { text-align: center; font-size: 0.88rem; color: var(--text-light); margin-top: 28px; }
-
-        /* ===== まとめ ===== */
-        .summary-block {
-            max-width: 680px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .summary-block p { font-size: 1.05rem; line-height: 2.1; color: var(--text-color); margin-bottom: 18px; }
-        .summary-block p:last-child { margin-bottom: 0; }
-
-        /* ===== CTA ===== */
-        .cta-wrap {
-            background: var(--accent-blue);
-            color: #fff;
-            text-align: center;
-            padding: 70px 24px;
-        }
-        .cta-wrap h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; margin-bottom: 16px; }
-        .cta-wrap p { font-size: 1rem; color: #cce0ff; margin-bottom: 28px; }
-        .cta-tel {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: 0.04em;
-            display: block;
-            margin-bottom: 8px;
-        }
-        .cta-tel a { color: inherit; }
-        .cta-note { font-size: 0.88rem; color: #cce0ff; }
-
-        /* ===== Footer ===== */
-        footer { background: #111; color: #ccc; padding: 48px 24px; text-align: center; }
-        .footer-main { font-size: 0.95rem; margin-bottom: 16px; color: #ddd; line-height: 2.2; }
-        .footer-copy { font-size: 0.78rem; color: #666; margin-top: 12px; }
-
-        /* ===== Hamburger Button ===== */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 3px;
-            padding: 8px 13px;
-            cursor: pointer;
-            background: rgba(255,255,255,0.12);
-            border: 1px solid rgba(255,255,255,0.38);
-            border-radius: 4px;
-            z-index: 1100;
-        }
-        .hamburger span:not(.hamburger-label) {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background: #fff;
-            border-radius: 2px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            transform-origin: center;
-        }
-        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
-        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-        .hamburger-label {
-            display: none;
-            font-size: 0.62rem;
-            font-weight: 700;
-            color: #fff;
-            letter-spacing: 0.06em;
-            margin-top: 3px;
-            line-height: 1;
-        }
-
-        /* ===== Mobile Quick Nav ===== */
-        .mobile-quicknav { display: none; }
-        .mobile-quicknav a {
-            display: block;
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.82rem;
-            padding: 8px 13px;
-            background: rgba(0,51,102,0.55);
-            border: 1px solid rgba(170,192,224,0.45);
-            border-radius: 3px;
-            white-space: nowrap;
-            transition: background 0.2s;
-        }
-        .mobile-quicknav a:hover { background: rgba(0,51,102,0.9); }
-
-        /* Logo full / short */
-        .logo-short {
-            display: none;
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            padding: 8px 13px;
-            background: rgba(0,51,102,0.55);
-            border: 1px solid rgba(170,192,224,0.45);
-            border-radius: 3px;
-            white-space: nowrap;
-            transition: background 0.2s;
-        }
-        .logo a:hover .logo-short { background: rgba(0,51,102,0.9); }
-
-        /* Nav right group */
-        .nav-right { display: flex; align-items: center; gap: 8px; }
-
-        /* ===== Mobile Menu ===== */
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.97);
-            z-index: 1050;
-            flex-direction: column;
-            align-items: stretch;
-            overflow-y: auto;
-        }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 16px 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-            flex-shrink: 0;
-        }
-        .mobile-menu-header-title {
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 900;
-            letter-spacing: 0.08em;
-        }
-        .mobile-menu-close {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: #fff;
-            font-size: 0.9rem;
-            font-weight: 700;
-            padding: 9px 18px;
-            cursor: pointer;
-            letter-spacing: 0.05em;
-            border-radius: 3px;
-            transition: background 0.2s;
-        }
-        .mobile-menu-close:hover { background: rgba(255,255,255,0.22); }
-        .mobile-menu-links { flex: 1; }
-        .mobile-menu-links a {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            color: #fff;
-            font-size: 1.15rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            padding: 22px 22px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            transition: background 0.2s;
-        }
-        .mobile-menu-links a::after {
-            content: "›";
-            margin-left: auto;
-            font-size: 1.5rem;
-            font-weight: 400;
-            opacity: 0.45;
-        }
-        .mobile-menu-links a:hover, .mobile-menu-links a.active {
-            background: rgba(170,192,224,0.14);
-            color: #aac0e0;
-        }
-        .mobile-menu-tel {
-            padding: 28px 22px;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.12);
-            flex-shrink: 0;
-        }
-        .mobile-menu-tel p {
-            color: #aaa;
-            font-size: 0.88rem;
-            margin-bottom: 10px;
-        }
-        .mobile-menu-tel a {
-            display: inline-block;
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: 0.05em;
-            padding: 14px 28px;
-            background: rgba(0,51,102,0.6);
-            border: 1px solid rgba(170,192,224,0.4);
-            border-radius: 4px;
-            transition: background 0.2s;
-        }
-        .mobile-menu-tel a:hover { background: rgba(0,51,102,0.9); }
-
-        /* ===== Responsive ===== */
-        @media (max-width: 768px) {
-            nav { padding: 10px 14px; }
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .hamburger-label { display: block; }
-            .mobile-quicknav { display: flex; }
-            .logo-full { display: none; }
-            .logo-short { display: inline-block; }
-            .section-wrap { padding: 70px 16px; }
-            .two-col { grid-template-columns: 1fr; gap: 32px; }
-            .two-col.reverse { direction: ltr; }
-            .features-grid { grid-template-columns: 1fr; }
-            .img-placeholder { min-height: 220px; }
-            .vs-grid { grid-template-columns: 1fr; }
-            .vs-col.vs-good { border-left: none; border-top: 1px solid var(--border-color); }
-            .merit-grid { grid-template-columns: 1fr; }
-            .sample-side { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -654,7 +74,7 @@
         <div class="section-inner">
             <div class="two-col">
                 <div>
-                    <h2 class="section-title" style="text-align:left; padding-bottom:18px;">ハイブリングコートとは</h2>
+                    <h2 class="section-title align-left">ハイブリングコートとは</h2>
                     <div class="text-body">
                         <p>
                             ハイブリングコートとは、<br>
@@ -662,7 +82,7 @@
                             打ちっぱなしコンクリートのような質感を再現できる仕上げ工法です。
                         </p>
                     </div>
-                    <p style="font-size:0.92rem; font-weight:700; color:var(--accent-blue); margin: 24px 0 12px;">対応下地</p>
+                    <p class="subsection-label">対応下地</p>
                     <div class="base-list">
                         <span class="base-tag">石膏ボード</span>
                         <span class="base-tag">ケイカル板</span>
@@ -682,7 +102,7 @@
                         </p>
                     </div>
                 </div>
-                <img src="../image/wall_Gemini_Generated_Image_leaduleaduleadul.png" alt="ハイブリングコート施工例" style="width:100%; height:100%; object-fit:cover; display:block;">
+                <img src="../image/wall_Gemini_Generated_Image_leaduleaduleadul.png" alt="ハイブリングコート施工例" class="img-cover">
             </div>
         </div>
     </div>
@@ -691,7 +111,7 @@
     <div id="sample" class="section-wrap bg-grey">
         <div class="section-inner">
             <h2 class="section-title">ベニヤ板が、コンクリートになる</h2>
-            <p style="text-align:center; color:var(--text-light); font-size:1rem; margin-bottom:48px; margin-top:-30px;">実物サンプルで確かめる、施工前後の変化</p>
+            <p class="section-subtitle">実物サンプルで確かめる、施工前後の変化</p>
 
             <div class="sample-card">
                 <div class="sample-ba">
@@ -700,7 +120,7 @@
                         <span class="sample-label">BEFORE</span>
                         <p class="sample-panel-cap">素のベニヤ板</p>
                     </div>
-                    <div class="sample-panel" style="border-left: 3px solid var(--white);">
+                    <div class="sample-panel sample-panel--divider">
                         <img src="../image/After_IMG_20260317_150754444~2.jpg" alt="施工後：ハイブリングコート仕上げ">
                         <span class="sample-label after">AFTER</span>
                         <p class="sample-panel-cap">ハイブリングコート施工後</p>
@@ -732,7 +152,7 @@
     <div id="features" class="section-wrap bg-grey">
         <div class="section-inner">
             <h2 class="section-title">ハイブリングコートの特徴</h2>
-            <div class="text-body" style="text-align:center; margin-bottom:44px;">
+            <div class="text-body centered" style="margin-bottom:44px;">
                 <p>
                     ハイブリングコートは、<br>
                     単なる「コンクリート風」ではありません。<br>
@@ -757,8 +177,8 @@
                     <p>コーティングの仕様により、汚れ防止・傷防止・耐水性などの保護性能を付加できます。</p>
                 </div>
             </div>
-            <div style="overflow:hidden; margin-top:44px;">
-                <img src="../image/hand_Gemini_Generated_Image_lcyt3zlcyt3zlcyt.png" alt="ハイブリングコート施工中" style="width:100%; display:block; margin-bottom:-6%;">
+            <div class="img-bleed">
+                <img src="../image/hand_Gemini_Generated_Image_lcyt3zlcyt3zlcyt.png" alt="ハイブリングコート施工中">
             </div>
         </div>
     </div>
@@ -767,7 +187,7 @@
     <div id="vs-cloth" class="section-wrap">
         <div class="section-inner">
             <h2 class="section-title">クロス（壁紙）との違い</h2>
-            <div class="text-body" style="text-align:center; margin-bottom:44px;">
+            <div class="text-body centered" style="margin-bottom:44px;">
                 <p>
                     コンクリートやモルタルの無骨な質感は、<br>
                     インダストリアル・ブルックリンスタイルなど、<br>
@@ -827,13 +247,13 @@
                     </p>
                 </div>
             </div>
-            <div class="text-body" style="text-align:center; margin-bottom:36px;">
+            <div class="text-body centered" style="margin-bottom:36px;">
                 <p>
                     設計者・デザイナーにとって、<br>
                     ハイブリングコートは<strong>表現の選択肢を広げる素材</strong>です。
                 </p>
             </div>
-            <div class="compare-list" style="max-width:720px; margin:0 auto 32px;">
+            <div class="compare-list centered">
                 <div class="compare-row">
                     <span class="check">✔</span>
                     <span>コスト・工期・施工環境を理由に諦めていたコンクリート表現を、下地を選ばず実現できる</span>
@@ -847,14 +267,14 @@
                     <span>「コンクリートにしたいが難しい」という制約から解放され、デザインの発想が広がる</span>
                 </div>
             </div>
-            <div class="text-body" style="text-align:center;">
+            <div class="text-body centered">
                 <p>
                     「ここをコンクリートにしたかったが、諦めていた」という場所に。<br>
                     ハイブリングコートは、そのアイデアを実現するための選択肢です。
                 </p>
             </div>
-            <div style="overflow:hidden; margin-top:44px;">
-                <img src="../image/Cafe_Gemini_Generated_Image_iut2jfiut2jfiut2.png" alt="ハイブリングコート 店舗施工例" style="width:100%; display:block; margin-bottom:-6%;">
+            <div class="img-bleed">
+                <img src="../image/Cafe_Gemini_Generated_Image_iut2jfiut2jfiut2.png" alt="ハイブリングコート 店舗施工例">
             </div>
         </div>
     </div>
@@ -944,60 +364,11 @@
         <p class="footer-main">
             打ち放しコンクリートの補修・原状回復に関するご相談は、<br>
             有限会社ジェイシー技研までお気軽にお問い合わせください。<br>
-            <strong style="color:#fff; font-size:1.2rem;">
-                <a href="tel:090-8811-5560" style="color:#fff;">TEL：090-8811-5560</a>
-            </strong>
+            <strong class="footer-tel"><a href="tel:090-8811-5560">TEL：090-8811-5560</a></strong>
         </p>
         <p class="footer-copy">&copy; 2025 有限会社ジェイシー技研 All Rights Reserved.</p>
     </footer>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
-        const hamburgerLabel = hamburgerBtn.querySelector('.hamburger-label');
-
-        function openMenu() {
-            hamburgerBtn.classList.add('open');
-            mobileMenu.classList.add('open');
-            hamburgerBtn.setAttribute('aria-expanded', 'true');
-            if (hamburgerLabel) hamburgerLabel.textContent = '閉じる';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMenu() {
-            hamburgerBtn.classList.remove('open');
-            mobileMenu.classList.remove('open');
-            hamburgerBtn.setAttribute('aria-expanded', 'false');
-            if (hamburgerLabel) hamburgerLabel.textContent = 'メニュー';
-            document.body.style.overflow = '';
-        }
-
-        hamburgerBtn.addEventListener('click', function () {
-            if (mobileMenu.classList.contains('open')) {
-                closeMenu();
-            } else {
-                openMenu();
-            }
-        });
-
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', closeMenu);
-        }
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-                closeMenu();
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
