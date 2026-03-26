@@ -8,6 +8,10 @@ move_images.ps1
 
 flyer/
 
+# 一時・同期ツール（*.TMP は Git が index できないことがある）
+*.TMP
+*~RF*.TMP
+
 # OS
 .DS_Store
 Thumbs.db

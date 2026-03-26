@@ -747,6 +747,36 @@ footer { background: #111; color: #ccc; padding: 48px 24px; text-align: center; 
 .sample-caption p:last-child { margin-bottom: 0; }
 .sample-caption strong { color: var(--accent-blue); }
 
+.sample-compare-note {
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-color);
+    max-width: 640px;
+    margin: 0 auto 36px;
+    padding: 0 8px;
+}
+.sample-compare-note strong { color: var(--accent-blue); }
+
+.section-title--sample-sub {
+    margin-top: 8px;
+}
+
+.sample-card--note {
+    border-top: none;
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+}
+.sample-gypsum-note {
+    padding: 28px 32px;
+    font-size: 0.95rem;
+    line-height: 2.1;
+    color: var(--text-color);
+}
+.sample-gypsum-note p { margin-bottom: 12px; }
+.sample-gypsum-note p:last-child { margin-bottom: 0; }
+.sample-gypsum-note strong { color: var(--accent-blue); }
+
 /* まとめブロック */
 .summary-block {
     max-width: 680px;
