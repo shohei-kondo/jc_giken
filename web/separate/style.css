@@ -792,15 +792,23 @@ footer { background: #111; color: #ccc; padding: clamp(2.5rem, 6vw, 3rem) var(--
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     gap: clamp(20px, 4vw, 36px);
-    align-items: center;
+    align-items: start;
     padding: clamp(18px, 3vw, 28px);
 }
 .sample-side-img {
     overflow: hidden;
     border: 1px solid var(--border-color);
     border-radius: 2px;
+    /* 縦長写真のままだと右カラムに空白が多くなるため、高さを抑えてトリミング */
+    height: clamp(168px, 26vw, 260px);
 }
-.sample-side-img img { width: 100%; display: block; object-fit: cover; }
+.sample-side-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
 .sample-caption {
     font-size: clamp(0.9rem, 2vw, 0.95rem);
     line-height: 1.95;
