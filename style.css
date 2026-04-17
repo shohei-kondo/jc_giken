@@ -287,7 +287,7 @@ nav {
 /* ===== 6. ページヒーロー & パンくずリスト ===== */
 .page-hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('../image/1773379434410.png')
+                url('../web/image/1773379434410.png')
                 no-repeat center center / cover;
     padding: clamp(6.5rem, 16vw, 8.75rem) var(--page-pad-x) clamp(2.75rem, 7vw, 5rem);
     text-align: center;
@@ -405,7 +405,7 @@ footer { background: #111; color: #ccc; padding: clamp(2.5rem, 6vw, 3rem) var(--
 .hero {
     min-height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-                url('../image/1773379434410.png')
+                url('../web/image/1773379434410.png')
                 no-repeat center center / cover;
     display: flex;
     align-items: center;
