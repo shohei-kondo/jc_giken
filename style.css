@@ -276,6 +276,37 @@ nav {
 .text-body p:last-child { margin-bottom: 0; }
 .text-body.centered { text-align: center; }
 
+/* FAQ */
+.faq-list {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.faq-item {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    padding: 16px 18px;
+}
+.faq-question {
+    font-size: clamp(0.98rem, 2vw, 1.04rem);
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+.faq-answer {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.9;
+}
+.faq-answer a {
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
 /* サブセクションラベル */
 .subsection-label {
     font-size: 0.92rem;

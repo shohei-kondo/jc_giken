@@ -1,0 +1,7 @@
+# robots.txt for https://www.jcgiken.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.jcgiken.com/sitemap.xml
