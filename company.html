@@ -2,6 +2,14 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6T82WWXQK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X6T82WWXQK');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>会社概要・求人情報｜有限会社ジェイシー技研（東京都杉並区）</title>
     <meta name="description" content="有限会社ジェイシー技研の会社概要・求人情報。東京都杉並区方南を拠点とする打ち放しコンクリート補修・原状回復の専門業者。1995年設立、建設業許可 東京都知事許可 第117638号。">
@@ -65,7 +73,7 @@
       "faxNumber": "+81-3-6304-3920",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "方南1-29-1 ウインズ2A",
+        "streetAddress": "方南1-29-1",
         "addressLocality": "杉並区",
         "addressRegion": "東京都",
         "postalCode": "168-0062",
@@ -96,7 +104,7 @@
         "@type": "Place",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "方南1-29-1 ウインズ2A",
+          "streetAddress": "方南1-29-1",
           "addressLocality": "杉並区",
           "addressRegion": "東京都",
           "postalCode": "168-0062",
@@ -126,6 +134,7 @@
                     <li><a href="index.html">ホーム</a></li>
                     <li><a href="cases.html">原状回復工事の施工事例</a></li>
                     <li><a href="hybring-coat.html">ハイブリングコートとは</a></li>
+                    <li><a href="faq.html">よくある質問</a></li>
                     <li><a href="company.html" class="active">会社概要</a></li>
                 </ul>
                 <button class="hamburger" id="hamburgerBtn" aria-label="メニューを開く" aria-expanded="false">
@@ -148,11 +157,8 @@
             <a href="index.html">ホーム（トップページ）</a>
             <a href="cases.html">原状回復工事の施工事例</a>
             <a href="hybring-coat.html">ハイブリングコートとは</a>
+            <a href="faq.html">よくある質問</a>
             <a href="company.html" class="active">会社概要</a>
-        </div>
-        <div class="mobile-menu-tel">
-            <p>お電話でのお問い合わせ</p>
-            <a href="tel:090-8811-5560">TEL：090-8811-5560</a>
         </div>
     </div>
 
@@ -188,7 +194,7 @@
                 </tr>
                 <tr>
                     <th>所在地</th>
-                    <td>〒168-0062 東京都杉並区方南1-29-1　ウインズ2A</td>
+                    <td>〒168-0062 東京都杉並区方南1-29-1</td>
                 </tr>
                 <tr>
                     <th>TEL</th>
@@ -226,9 +232,31 @@
             <div class="recruit-card">
                 <p>当社では施工スタッフを募集しています。</p>
                 <p>経験者は優遇しますが、未経験者もご相談ください。</p>
-                <p>詳細はお問い合わせください。</p>
-                <a href="tel:090-8811-5560" class="btn">採用について問い合わせる</a>
+                <p>詳細はお問い合わせフォームからご連絡ください。</p>
+                <a href="#contact" class="btn">採用について問い合わせる</a>
             </div>
+        </div>
+    </div>
+
+    <!-- お問い合わせフォーム -->
+    <div id="contact" class="section-wrap">
+        <div class="section-inner section-inner--narrow">
+            <h2 class="section-title">お問い合わせフォーム</h2>
+            <form class="contact-form" action="https://formspree.io/f/xgornawz" method="POST">
+                <label for="contact-name">お名前（必須）</label>
+                <input id="contact-name" type="text" name="name" required>
+
+                <label for="contact-email">メールアドレス（必須）</label>
+                <input id="contact-email" type="email" name="email" required>
+
+                <label for="contact-tel">電話番号（任意）</label>
+                <input id="contact-tel" type="tel" name="tel">
+
+                <label for="contact-message">お問い合わせ内容（必須）</label>
+                <textarea id="contact-message" name="message" rows="6" required></textarea>
+
+                <button type="submit" class="btn-submit">送信する</button>
+            </form>
         </div>
     </div>
 
@@ -236,18 +264,17 @@
     <div class="cta-wrap">
         <h2>まずはお気軽にご相談ください</h2>
         <p>現地確認・ご相談・お見積りは応相談</p>
-        <span class="cta-tel"><a href="tel:090-8811-5560">TEL：090-8811-5560</a></span>
+        <a href="#contact" class="btn">お問い合わせフォームへ</a>
         <p class="cta-note">有限会社ジェイシー技研（東京都杉並区）</p>
     </div>
 
     <footer>
         <p class="footer-main">
             打ち放しコンクリートの補修・原状回復に関するご相談は、<br>
-            有限会社ジェイシー技研までお気軽にお問い合わせください。<br>
-            <strong class="footer-tel"><a href="tel:090-8811-5560">TEL：090-8811-5560</a></strong>
+            有限会社ジェイシー技研までお気軽にお問い合わせください。
         </p>
         <address class="footer-address">
-            〒168-0062 東京都杉並区方南1-29-1　ウインズ2A
+            〒168-0062 東京都杉並区方南1-29-1
         </address>
         <p class="footer-copy">&copy; 2025 有限会社ジェイシー技研 All Rights Reserved.</p>
     </footer>
