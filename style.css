@@ -501,6 +501,19 @@ footer { background: #111; color: #ccc; padding: clamp(2.5rem, 6vw, 3rem) var(--
     transform: translateY(-2px);
 }
 
+/* トップページ 施工事例ダイジェスト */
+.case-digest-item {
+    max-width: 980px;
+    margin: 0 auto;
+}
+.case-digest-link {
+    text-align: center;
+    margin-top: 22px;
+}
+.case-digest-link .btn {
+    margin-top: 0;
+}
+
 /* お悩みグリッド */
 .troubles-grid {
     display: grid;
