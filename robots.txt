@@ -1,6 +1,41 @@
 # robots.txt for https://www.jcgiken.com/
 
+# Default policy: allow all crawlers
 User-agent: *
+Allow: /
+
+# Content signal (non-standard directive; supported by some crawlers)
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+# Explicitly allow major AI/search crawlers (intentional redundancy)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap
